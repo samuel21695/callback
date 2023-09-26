@@ -43,15 +43,14 @@
     </ul>
   </div>
   <script>
-    liTextContents = document.getElementsByTagName('root')
-    console.log(root.children[0])
+    const root = document.getElementById('root');
+    const ul = root.children[0];
+    console.log(ul);
 
-    const liItemArray = root.children[0].children;
-    for(let i = 0; i < liItemArray.length; i++) {
-      liItemArray[i].addEventListener("click", function() {
-        liItemArray[i].style.color = "red";
-      })
-    }
+    // eventTarget
+    ul.addEventListener('click', function(eventTarget) {
+      eventTarget.target.style.color = "red";
+    })
   </script>
 </body>
 </html>
