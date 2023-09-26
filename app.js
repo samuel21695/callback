@@ -1,26 +1,17 @@
-// function sachick(firstNumber, secondNumber, calc) {
-//   // 사칙연산을 매개변수로
-//   return firstNumber calc secondNumber;
-// }
-
-function sachick(firstNumber, secondNumber, callback) {
-  // 사칙연산을 매개변수로
-  return callback(firstNumber, secondNumber);
+function a(first, second, callback) {
+  return callback(first, second);
 }
 
-function originalSachick(firstNumber, secondNumber) {
-  return firstNumber + secondNumber;
-}
-console.log(originalSachick(7, 7))
+let minusValue = a(1, 2, function(first, second) {
+  return first - second;
+});
 
-// 콜백함수를 달아버리면 
-const a = sachick(1, 2, function(firstNumber, secondNumber) {
-  return firstNumber + secondNumber;
-})
+let plusValue = a(function(first, second) {
+  return first + second;
+});
 
-const b = sachick(2, 3 ,function(firstNumber, secondNumber) {
-  return firstNumber - secondNumber;
-})
+let divideValue = a(function(first, second) {
+  return first / second;
+});
 
-console.log(a);
-console.log(b);
+console.log(minusValue)
