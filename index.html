@@ -6,10 +6,10 @@
   <title>Document</title>
 </head>
 <body>
-  <div id="root">
+  <div id="root" data-special="1">
     <ul>
-      <li>공욱재</li>
       <!-- li{items-$}*30 -->
+      <!-- data 내가 만드는 속성 -->
       <li>items-1</li>
       <li>items-2</li>
       <li>items-3</li>
@@ -20,37 +20,21 @@
       <li>items-8</li>
       <li>items-9</li>
       <li>items-10</li>
-      <li>items-11</li>
-      <li>items-12</li>
-      <li>items-13</li>
-      <li>items-14</li>
-      <li>items-15</li>
-      <li>items-16</li>
-      <li>items-17</li>
-      <li>items-18</li>
-      <li>items-19</li>
-      <li>items-20</li>
-      <li>items-21</li>
-      <li>items-22</li>
-      <li>items-23</li>
-      <li>items-24</li>
-      <li>items-25</li>
-      <li>items-26</li>
-      <li>items-27</li>
-      <li>items-28</li>
-      <li>items-29</li>
-      <li>items-30</li>
+
     </ul>
   </div>
   <script>
     const root = document.getElementById('root');
-    const ul = root.children[0];
-    console.log(ul);
+    console.dir(root.dataset.special)
+    console.log(typeof(root.dataset.special))
+    // const ul = root.children[0];
+    // console.log(ul);
+    
 
-    // eventTarget
-    ul.addEventListener('click', function(eventTarget) {
-      eventTarget.target.style.color = "red";
-    })
+    // // eventTarget
+    // ul.addEventListener('click', function(eventTarget) {
+    //   eventTarget.target.style.color = "red";
+    // })
   </script>
 </body>
 </html>
